@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+<template name="lists">
+  <view class="about-img"><image src='{{img}}' ></image></view>
+<view>
+<view>{{title}}</view>
+<view>{{cTime}}</view>
+</view>
+</template>
+</view>
