@@ -15,6 +15,7 @@
 <template is="lists" data="{{...item}}"/>
 
 </view>
+
 <view bindtap="loadmore" data-lastid="{{lastid}}" data-isfirst="{{isfirst}}" >加载更多</view>
 <toast hidden="{{toastHidden}}" bindchange="toastChange">没有更多文章了</toast>
 <modal title="温馨提示" no-cancel confirm-text="确定" hidden="{{modalHidden}}" mask bindconfirm="modalChange" bindcancel="modalChange">

@@ -5,8 +5,8 @@ Page({
     newsList: [],
     toastHidden: true,
     modalHidden: true,
-    isfirst: 1
-
+    isfirst: 1,
+  
   },
   //事件处理函数
   bindViewTap: function () {
@@ -16,6 +16,9 @@ Page({
   },
   loadData: function (lastid) {
     var that = this
+    // that.setData({
+    //   loadhidden: true
+    // })
     wx.request({
       url: 'http://127.0.0.1:8000/items/?limit=2',
       data: {
@@ -42,6 +45,9 @@ Page({
         that.setData({
           newsList: newData
         })
+      },
+      complete: function(){
+       
       }
     })
   },
@@ -49,7 +55,6 @@ Page({
     console.log('onLoad')
     var that = this
     this.loadData(0)
-    this.getNetwork()
 
   },
   loadmore: function (event) {
